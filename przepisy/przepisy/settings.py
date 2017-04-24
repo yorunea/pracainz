@@ -56,11 +56,12 @@ MIDDLEWARE = [
 ]
 
 ROOT_URLCONF = 'przepisy.urls'
-
+PROJECT_DIR = os.path.abspath(os.path.dirname(__file__))
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
         'DIRS': [
+            os.path.join(PROJECT_DIR, 'templates').replace('\\', '/'),
         ],
         'APP_DIRS': True,
         'OPTIONS': {
